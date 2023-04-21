@@ -70,7 +70,7 @@ a {
   color: white;
 }
 
-.weekday {
+.weekday-name {
   font-weight: bold;
   text-transform: uppercase;
   width: 100%;
@@ -93,6 +93,17 @@ a {
   grid-template-columns: repeat(1, 5fr);
   grid-gap: 0;
   width: 100%;
+}
+
+.num-calendar {
+  background-color: #eae0f7;
+  width: 29px;
+  height: 30px;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  color: #4701a8;
+  line-height: 1.2;
+  font-weight: bold;
 }
 
 .button-container {
@@ -250,4 +261,33 @@ footer p {
 footer a {
   color: #c69eff;
   text-decoration: none;
+}
+
+@media (max-width: 900px) {
+
+  /* CALENDAR */
+  .month-year {
+    font-size: 1.5rem;
+    padding: 1rem 1rem 0rem;
+    font-weight: bolder;
+  }
+  
+  .month-change {
+    padding: 1rem 1rem 0rem;
+  }
+
+  .weekday-name {
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .week {
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    width: 100%;
+  }
+
 }

@@ -20,7 +20,7 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header class="container py-5">
+  <header class="container py-4">
     <div class="row m-0">
       <div class="col-6">
         <h1>Mis Reservas</h1>
@@ -86,7 +86,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <input class="mt-2 purple-button" id="add" type="submit" value="Reservar una mesa" data-bs-dismiss="modal">
+          <input class="mt-2 purple-button" id="add" type="submit" value="Reservar una mesa" data-bs-dismiss="modal" onclick="enviar_reserva();">
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@
   <!-- BODY CALENDAR -->
   <section class="container-fluids">
     <div class="row m-0">
-      <div class="col-12 col-md-6 px-4">
+      <div class="col-12 col-md-6 px-4 mb-5">
         <div class="calendar w-100">
           <div class="calendar-header d-flex flex-row justify-content-between align-items-center">
             <h5 class="month-year m-0">Mayo 2023</h5>
@@ -107,55 +107,179 @@
           </div>
           <div class="calendar-body">
             <div class="d-flex flex-row justify-content-center calendar-weekdays">
-              <div class="weekday text-center">Lunes</div>
-              <div class="weekday text-center">Martes</div>
-              <div class="weekday text-center">Miércoles</div>
-              <div class="weekday text-center">Jueves</div>
-              <div class="weekday text-center">Viernes</div>
-              <div class="weekday text-center">Sábado</div>
-              <div class="weekday text-center">Domingo</div>
+              <div class="weekday-name text-center">Lunes</div>
+              <div class="weekday-name text-center">Martes</div>
+              <div class="weekday-name text-center">Miércoles</div>
+              <div class="weekday-name text-center">Jueves</div>
+              <div class="weekday-name text-center">Viernes</div>
+              <div class="weekday-name text-center">Sábado</div>
+              <div class="weekday-name text-center">Domingo</div>
             </div>
             <div class="calendar-days">
               <div class="week">
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
+                <div class="weekday" data-dia="1" onclick="mostrar_reserva(1);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">1</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="2" onclick="mostrar_reserva(2);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">2</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="3" onclick="mostrar_reserva(3);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">3</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="4" onclick="mostrar_reserva(4);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">4</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="5" onclick="mostrar_reserva(5);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">5</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="6" onclick="mostrar_reserva(6);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">6</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="7" onclick="mostrar_reserva(7);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">7</div>
+                  </div>
+                </div>
               </div>
               <div class="week">
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
+                <div class="weekday" data-dia="8" onclick="mostrar_reserva(8);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">8</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="9" onclick="mostrar_reserva(9);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">9</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="10" onclick="mostrar_reserva(10);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">10</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="11" onclick="mostrar_reserva(11);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">11</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="12" onclick="mostrar_reserva(12);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">12</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="13" onclick="mostrar_reserva(13);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">13</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="14" onclick="mostrar_reserva(14);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">14</div>
+                  </div>
+                </div>
               </div>
               <div class="week">
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
+                <div class="weekday" data-dia="15" onclick="mostrar_reserva(15);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">15</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="16" onclick="mostrar_reserva(16);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">16</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="17" onclick="mostrar_reserva(17);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">17</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="18" onclick="mostrar_reserva(18);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">18</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="19" onclick="mostrar_reserva(19);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">19</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="20" onclick="mostrar_reserva(20);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">20</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="21" onclick="mostrar_reserva(21);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">21</div>
+                  </div>
+                </div>
               </div>
               <div class="week">
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
+                <div class="weekday" data-dia="22" onclick="mostrar_reserva(22);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">22</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="23" onclick="mostrar_reserva(23);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">23</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="24" onclick="mostrar_reserva(24);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">24</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="25" onclick="mostrar_reserva(25);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">25</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="26" onclick="mostrar_reserva(26);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">26</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="27" onclick="mostrar_reserva(27);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">27</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="28" onclick="mostrar_reserva(28);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">28</div>
+                  </div>
+                </div>
               </div>
               <div class="week">
-                <div class="weekday"></div>
-                <div class="weekday"></div>
-                <div class="weekday"></div>
+                <div class="weekday" data-dia="29" onclick="mostrar_reserva(29);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">29</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="30" onclick="mostrar_reserva(30);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">30</div>
+                  </div>
+                </div>
+                <div class="weekday" data-dia="31" onclick="mostrar_reserva(31);" >
+                  <div class="contenedor">
+                    <div class="num-calendar">31</div>
+                  </div>
+                </div>
                 <div class="weekday"></div>
                 <div class="weekday"></div>
                 <div class="weekday"></div>
@@ -165,49 +289,9 @@
           </div>
         </div> <!-- END calendar -->
       </div>
-      <aside class="col-12 col-md-6">
-        <h5 class="m-0">Listado de reservas</h5>
-        <h4 class="selected-date"><span class="material-symbols-outlined">calendar_month</span> Jueves 24 Mayo 2023</h4>
-         <!-- RESERVA CONTAINER -->
-        <div class="reserva-container">
-          <!-- ROW RESERVA -->
-          <div class="reserva w-100 row mb-2 mx-0">
-            <div class="col-1 dinner-icon d-flex justify-content-center align-items-center">
-              <span class="material-symbols-outlined">
-                restaurant
-              </span>
-            </div>
-            <div class="col-5 col-md-6">
-              <p class="reserva-name m-0">Federico Gonzalez F</p>
-              <p class="reserva-people m-0 purple">8 personas</p>
-              <p class="reserva-hour m-0">A las 17:00 hrs</p>
-              <p class="reserva-place place">Salón principal</p>
-            </div>
-            <div class="col-6 col-md-5 my-4">
-              <div class="m-0 d-flex flex-row justify-content-around m-0">
-                <a class="reserva-number" href="tel:">
-                  <button class="call-button">
-                    <span class="material-symbols-outlined">phone</span>
-                    <span class="d-md-block d-none">Llamar</span>
-                  </button>
-                </a>
-                <button class="edit-button">
-                  <span class="material-symbols-outlined">edit</span>
-                  <span class="d-md-block d-none">Editar</span>
-                </button>
-                <button class="delete-button">
-                  <span class="material-symbols-outlined">close</span>
-                  <span class="d-md-block d-none">Eliminar</span>
-                </button>
-              </div>
-            </div>
-          </div>
-      
+      <div class="calendario-principal col-12 col-md-6">
 
-         
-      
-        </div> <!-- END reserva-container -->
-      </aside>
+      </div>
     </div> <!-- END ROW -->
   </section>
 
