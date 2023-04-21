@@ -1,5 +1,17 @@
+body {
+  background: #f3f3f3!important;
+}
+
 p {
   font-family: Poppins;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+.purple {
+  color: #6d77e1;
 }
 
 .calendar {
@@ -42,6 +54,7 @@ p {
 .month-year {
   font-size: 2rem;
   padding: 2rem 1rem 1rem;
+  font-weight: bolder;
 }
 
 .month-change {
@@ -115,6 +128,101 @@ input#add {
   width: auto;
 }
 
+.dinner-icon {
+  background: #221634;
+  border-radius: 0.2rem;
+}
+
+.dinner-icon span {
+  color: #f6f6f6;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.selected-date {
+  color: #4701a8;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.reserva-container {
+  background-color: #ffffff;
+}
+
+.reserva {
+  padding: 1rem;
+}
+
+.reserva p {
+  line-height: 1.2;
+}
+
+.reserva-name {
+  font-weight: 600;
+}
+
+.place {
+  font-size: .8rem;
+  background: #b384f7;
+  width: fit-content;
+  color: white;
+  padding: 0.2rem 0.4rem;
+  margin: 0.2rem 0 0;
+}
+
+.edit-button {
+  background: #550195;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+}
+
+.call-button {
+  background: #5db585;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 3px rgba(0, 233, 47, 0.1);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+}
+
+.delete-button {
+  background: #f31962;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 3px rgba(233, 0, 151, 0.1);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+}
+
+.delete-button .material-symbols-outlined, .call-button .material-symbols-outlined, .edit-button .material-symbols-outlined {
+  margin: 0;
+}
+
+.delete-button:hover {
+  background: #c40847;
+  transform: rotate(45deg) scale3d(1.5);
+}
+
+/* FOOTER STYLE */
 footer.w-100.dark-bg {
   color: #fafafa;
   background-color: #221634;
