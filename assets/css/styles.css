@@ -1,0 +1,133 @@
+p {
+  font-family: Poppins;
+}
+
+.calendar {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #6100e9;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.calendar-header button {
+  border: none;
+  background-color: rgb(255 255 255 / 50%);
+  border-radius: 2rem;
+  width: 50px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.calendar-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month-year {
+  font-size: 2rem;
+  padding: 2rem 1rem 1rem;
+}
+
+.month-change {
+  padding: 2rem 1rem 1rem;
+}
+
+.calendar-weekdays {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  background-color: #4701a8;
+  color: white;
+}
+
+.weekday {
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.purple-button {
+  background: #6100e9;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 4px 3px rgb(97, 0, 233,.1);
+  transition: all 1s;
+}
+
+.purple-button:hover {
+  background: #4702a8;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 4px 3px rgb(97, 0, 233,.1);
+  transform: scale3d(1.05);
+}
+
+.material-symbols-outlined {
+  margin-right: 0.5rem;
+}
+
+input, select {
+  width: 300px;
+  height: 40px;
+}
+
+input#add {
+  width: auto;
+}
+
+footer.w-100.dark-bg {
+  color: #fafafa;
+  background-color: #221634;
+  text-align: center;
+  padding: 1rem 0 0.1rem;
+}
+
+footer p {
+  font-size: .8rem;
+  font-style: italic;
+}
+
+footer a {
+  color: #c69eff;
+  text-decoration: none;
+}

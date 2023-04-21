@@ -12,63 +12,129 @@
     <!-- fontawesome icons -->
     <script src="https://kit.fontawesome.com/d29f2ee156.js" crossorigin="anonymous"></script>
     <!-- google fonts -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <h1>Reserva de Mesa</h1>
-	<form>
-		<label for="nombre">Nombre de la persona que reserva:</label><br>
-		<input type="text" id="nombre" name="nombre"><br>
-        <label for="cantidad">Cantidad de personas:</label><br>
-        <input type="number" id="cantidad" name="cantidad"><br>
-    
-        <label for="fecha">Fecha de la reserva:</label><br>
-        <input type="date" id="fecha" name="fecha"><br>
-    
-        <label for="hora">Hora para la reserva:</label><br>
-        <input type="time" id="hora" name="hora"><br>
-    
-        <label for="lugar">Lugar de la reserva:</label><br>
-        <select id="lugar" name="lugar">
-            <option value="salon1">Salón 1</option>
-            <option value="salon2">Salón 2</option>
-            <option value="salon3">Salón 3</option>
-            <option value="terraza">Terraza</option>
-            <option value="azotea">Azotea</option>
-        </select><br>
-    
-        <input id="add" type="submit" value="Reservar">
-    </form>
-    <div class="container-fluid">
-        <h3 class="text-center">Sistema de Reservas</h3>
-        <div class="row">
-            <div class="calendar">
-                <div class="calendar-header d-flex flex-row justify-content-center">
-                  <button class="prev-month">&lt;</button>
-                  <h5 class="month-year px-4">Mayo 2023</h5>
-                  <button class="next-month">&gt;</button>
-                </div>
-                <div class="calendar-body">
-                  <div class="d-flex flex-row justify-content-center calendar-weekdays">
-                    <div class="col-1 weekday text-center">Lunes</div>
-                    <div class="col-1 weekday text-center">Martes</div>
-                    <div class="col-1 weekday text-center">Miércoles</div>
-                    <div class="col-1 weekday text-center">Jueves</div>
-                    <div class="col-1 weekday text-center">Viernes</div>
-                    <div class="col-1 weekday text-center">Sábado</div>
-                    <div class="col-1 weekday text-center">Domingo</div>
-                  </div>
-                  <div class="calendar-days">
+  <!-- HEADER -->
+  <header class="container my-5">
+    <div class="row">
+      <div class="col-6">
+        <h1>Mis Reservas</h1>
+      </div>
+      <div class="button-container col-6">
+        <button class="new-appointment purple-button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <span class="material-symbols-outlined">
+            calendar_add_on
+          </span> Nueva reserva
+        </button>
+      </div>
+    </div> <!-- end row -->
+  </header>
 
-                  </div>
-                </div>
-              </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="exampleModalLabel">Nueva reserva</h2>
         </div>
-    </div>
+        <div class="modal-body">
+          <form id="appointments">
+            <label class="mt-2" for="nombre">Nombre de la persona que reserva:</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
 
-    <!-- bootstrap.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <!-- scripts -->
-    <script src="assets/js/scripts.js"></script>
+            <label class="mt-2" for="personas">¿Para cuantos comensales?</label><br>
+            <input type="number" id="personas" name="personas"><br>
+            
+            <label class="mt-2" for="fecha">Fecha de la reserva:</label><br>
+            <input type="date" id="fecha" name="fecha"><br>
+          
+            <label class="mt-2" for="hora">Hora para la reserva:</label><br>
+            <select id="hora" name="hora">
+              <option value="1700">17:00 hrs</option>
+              <option value="1730">17:30 hrs</option>
+              <option value="1800">18:00 hrs</option>
+              <option value="1830">18:30 hrs</option>
+              <option value="1900">19:00 hrs</option>
+              <option value="1930">19:30 hrs</option>
+              <option value="2000">20:00 hrs</option>
+              <option value="2030">20:30 hrs</option>
+              <option value="2100">21:00 hrs</option>
+              <option value="2130">21:30 hrs</option>
+              <option value="2200">22:00 hrs</option>
+              <option value="2230">22:30 hrs</option>
+            </select><br>
+    
+            <label class="mt-2" for="lugar">Lugar de la reserva:</label><br>
+            <select id="lugar" name="lugar">
+              <option value="salon1">Salón 1</option>
+              <option value="salon2">Salón 2</option>
+              <option value="salon3">Salón 3</option>
+              <option value="terraza">Terraza</option>
+              <option value="azotea">Azotea</option>
+            </select><br>
+          
+            <label class="mt-2" for="telefono">Teléfono de contacto:</label><br>
+            <input type="tel" id="telefono" name="telefono"><br>
+    
+            <label class="mt-2" for="correo">Correo de contacto:</label><br>
+            <input type="email" id="correo" name="correo"><br>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <input class="mt-2 purple-button" id="add" type="submit" value="Reservar una mesa" data-bs-dismiss="modal">
+        </div>
+      </div>
+    </div>
+  </div> <!-- end modal -->
+
+
+  <!-- BODY CALENDAR -->
+  <section class="container-fluids">
+    <div class="row">
+      <div class="col-12 col-md-7">
+        <div class="calendar w-100">
+          <div class="calendar-header d-flex flex-row justify-content-between align-items-center">
+            <h5 class="month-year m-0">Mayo 2023</h5>
+            <div class="month-change">
+              <button class="prev-month">&lt;</button>
+              <button class="next-month">&gt;</button>
+            </div>
+          </div>
+          <div class="calendar-body">
+            <div class="d-flex flex-row justify-content-center calendar-weekdays">
+              <div class="weekday text-center">Lunes</div>
+              <div class="weekday text-center">Martes</div>
+              <div class="weekday text-center">Miércoles</div>
+              <div class="weekday text-center">Jueves</div>
+              <div class="weekday text-center">Viernes</div>
+              <div class="weekday text-center">Sábado</div>
+              <div class="weekday text-center">Domingo</div>
+            </div>
+            <div class="calendar-days">
+
+            </div>
+          </div>
+        </div> <!-- end calendar -->
+      </div>
+      <aside class="col-12 col-md-7">
+     
+      </aside>
+    </div> <!-- end row -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-100 dark-bg">
+    <p>Este sitio es un proyecto realizado por <strong>Federico Aníbal González Fernández.</strong> Alumno del <a href="https://www.udd.cl/ver-curso/bootcamp-desarrollo-web-full-stack/">Bootcamp Full Stack UDD</a> 2023.</p>
+  </footer>
+
+  <!-- bootstrap.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <!-- scripts -->
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
